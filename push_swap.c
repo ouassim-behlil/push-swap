@@ -1,6 +1,7 @@
 #include "pushSwap.h"
 
-static void	common_rotations(t_stack *from, t_stack *to, int *inner_rot_cost, int *insert_cost)
+static void	common_rotations(t_stack *from, t_stack *to,
+	int *inner_rot_cost, int *insert_cost)
 {
 	while (*insert_cost > 0 && *inner_rot_cost > 0)
 	{

@@ -32,8 +32,8 @@ static int	min_rotations_for_closest(t_stack *stack, int low, int high)
 
 static void	push_chunk(t_stack *from, t_stack *to, int low, int high)
 {
-	int			size;
-	int			minimum_rot;
+	int		size;
+	int		minimum_rot;
 
 	size = high - low + 1;
 	while (size-- > 0 && from->size > 0)
@@ -41,20 +41,10 @@ static void	push_chunk(t_stack *from, t_stack *to, int low, int high)
 		minimum_rot = min_rotations_for_closest(from, low, high);
 		if (minimum_rot < 0)
 		{
-			while (minimum_rot++ < 0)
-			{
-				reverse_rotate(from);
-				write(1, "rra\n", 4);
-			}
+			execute_reverse_rotate(from, &minimum_rot);
 		}
 		else if (minimum_rot > 0)
-		{
-			while (minimum_rot-- > 0)
-			{
-				rotate(from);
-				write(1, "ra\n", 3);
-			}
-		}
+			execute_rotate(from, &minimum_rot);
 		push_from(from, to);
 		write(1, "pb\n", 3);
 	}
@@ -96,4 +86,3 @@ int	min_index(t_stack *stack)
 	}
 	return (ind);
 }
-

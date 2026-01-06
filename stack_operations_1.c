@@ -52,7 +52,7 @@ t_node	*create_node(int val)
 	return (node);
 }
 
-int		*stack_to_array(t_stack *stack)
+int	*stack_to_array(t_stack *stack)
 {
 	int		*arr;
 	int		i;

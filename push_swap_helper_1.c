@@ -33,7 +33,7 @@ static int	total_cost(t_stack *from, t_stack *to, int index)
 	return (max(abs(insert_cost), abs(inner_rot_cost)));
 }
 
-int index_of_lowest_cost(t_stack *from, t_stack *to)
+int	index_of_lowest_cost(t_stack *from, t_stack *to)
 {
 	t_node		*node;
 	int			best_ind;

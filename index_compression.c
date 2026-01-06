@@ -1,4 +1,4 @@
-#include "./pushSwap.h"
+#include "pushSwap.h"
 
 static void	swap_values(int *a, int *b)
 {

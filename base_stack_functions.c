@@ -12,7 +12,7 @@ void	push(t_stack *stack, t_node *node)
 	t_node		*current_top;
 
 	if (!stack || !node)
-		return;
+		return ;
 	node->prev = NULL;
 	node->next = NULL;
 	if (is_empty(stack))
@@ -35,7 +35,7 @@ t_node	*pop(t_stack *stack)
 	t_node		*node;
 
 	if (!stack || is_empty(stack))
-			return (NULL);
+		return (NULL);
 	node = stack->top;
 	stack->top = node->next;
 	if (stack->top)
@@ -55,17 +55,17 @@ t_node	*peek(t_stack *stack)
 	return (stack->top);
 }
 
-void free_stack(t_stack *stack)
+void	free_stack(t_stack *stack)
 {
-	t_node  *tmp;
+	t_node	*tmp;
 
-    if (!stack)
-        return ;
-    while (stack->top)
-    {
-        tmp = stack->top->next;
-        free(stack->top);
-        stack->top = tmp;
-    }
-    free(stack);
+	if (!stack)
+		return ;
+	while (stack->top)
+	{
+		tmp = stack->top->next;
+		free(stack->top);
+		stack->top = tmp;
+	}
+	free(stack);
 }

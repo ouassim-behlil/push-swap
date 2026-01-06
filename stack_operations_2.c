@@ -1,6 +1,5 @@
 #include "pushSwap.h"
 
-
 void	rotate(t_stack *stack)
 {
 	t_node		*node;
@@ -25,11 +24,10 @@ void	reverse_rotate(t_stack *stack)
 		return ;
 	node = stack->bottom;
 	if (!node->prev)
-			return ;
+		return ;
 	stack->bottom = node->prev;
 	node->prev = NULL;
 	stack->bottom->next = NULL;
-
 	node->next = stack->top;
 	stack->top->prev = node;
 	stack->top = node;

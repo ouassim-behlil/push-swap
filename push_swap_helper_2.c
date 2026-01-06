@@ -56,11 +56,11 @@ int	find_lower_bound(t_stack *stack, int index)
 	{
 		if (top->next && top->index < index && top->next->index > index)
 			return (top->next->index);
-		if (bottom->prev && bottom->prev->index < index && bottom->index > index)
+		if (bottom->prev && bottom->prev->index < index
+			&& bottom->index > index)
 			return (bottom->index);
 		top = top->next;
 		bottom = bottom->prev;
 	}
 	return (-1);
 }
-

@@ -11,7 +11,9 @@ SRC =	base_stack_functions.c \
 		index_compression.c \
 		push_swap_helper_1.c \
 		push_swap_helper_2.c \
-		push_swap_helper_3.c
+		push_swap_helper_3.c \
+		easy_sort.c \
+		helpers.c
 
 OBJ = $(SRC:.c=.o)
 

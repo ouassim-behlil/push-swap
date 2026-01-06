@@ -1,23 +1,40 @@
 #include "pushSwap.h"
 #include <stdio.h>
 
+static void	solve(t_stack *stack)
+{
+	if (stack->size == 2)
+	{
+		swap(stack);
+		write(1, "sa\n", 3);
+	}
+	else if (stack->size == 3)
+		sort_three(stack);
+	else if (stack->size == 4)
+		sort_four(stack);
+	else if (stack->size == 5)
+		sort_five(stack);
+	else
+		push_swap(stack);
+}
 
 int	main(int argc, char **argv)
 {
 	t_stack	*stack;
-	//t_node	*node;
 
 	stack = create_fill_stack(argc, argv);
 	if (!stack)
-		return (1);
-	if (!stack_indexing(stack))
-		return (1);
-	push_swap(stack);
-	/*node = stack->top;
-	while (node)
 	{
-		printf("node: %d \t index %d\n", node->value, node->index);
-		node = node->next;
-	}*/
+		write(1, "Error\n", 6);
+		return (1);
+	}
+	if (stack->size == 0)
+		return (0);
+	if (!stack_indexing(stack))
+	{
+		write(1, "Error\n", 6);
+		return (1);
+	}
+	solve(stack);
 	return (0);
 }
