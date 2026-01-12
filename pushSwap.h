@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pushSwap.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obehlil <obehlil@student.1337.ma>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/08 13:34:51 by obehlil           #+#    #+#             */
+/*   Updated: 2026/01/08 13:35:27 by obehlil          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 
 # include "stdlib.h"
 # include "unistd.h"
 # include <limits.h>
+# include <stdbool.h>
 
 typedef struct s_node
 {

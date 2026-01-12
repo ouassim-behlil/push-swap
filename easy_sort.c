@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   easy_sort.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obehlil <obehlil@student.1337.ma>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/08 13:34:20 by obehlil           #+#    #+#             */
+/*   Updated: 2026/01/08 13:34:21 by obehlil          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pushSwap.h"
 
 void	sort_three(t_stack *stack)
@@ -53,6 +65,7 @@ void	sort_four(t_stack *a)
 	sort_three(a);
 	push_from(b, a);
 	write(1, "pa\n", 3);
+	free_stack(b);
 }
 
 void	move_min_to_top(t_stack *stack)
@@ -97,4 +110,5 @@ void	sort_five(t_stack *a)
 	write(1, "pa\n", 3);
 	push_from(b, a);
 	write(1, "pa\n", 3);
+	free_stack(b);
 }

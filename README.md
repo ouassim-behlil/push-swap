@@ -63,10 +63,8 @@ If the sorting is correct, it will display `OK`.
 ### AI Usage
 
 Artificial Intelligence was utilized in the following ways during this project:
-- **Algorithm Optimization**: AI helped brainstorm the cost calculation logic and the "chunking" strategy for pushing elements from stack A to B.
-- **Debugging**: Assisting in identifying edge cases (e.g., INT_MIN/INT_MAX, empty strings, or duplicate handling) and fixing memory leaks.
-- **Documentation**: Generating parts of the `README.md` and commenting complex logic in the source code to improve maintainability.
-- **Performance Testing**: Designing the `test_performance.sh` script to automate large-scale testing and verify operation counts against 42's benchmarks.
+
+- **Documentation**: Generating parts of the `README.md` and explaining time and space complexity and big O notation.
 
 ## Usage Example
 

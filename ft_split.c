@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obehlil <obehlil@student.1337.ma>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/08 13:34:26 by obehlil           #+#    #+#             */
+/*   Updated: 2026/01/08 13:34:27 by obehlil          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pushSwap.h"
 
 size_t	ft_countwords(const char *str, char c)
@@ -64,6 +76,8 @@ char	**ft_split(const char *s, char c)
 
 	i = 0;
 	wordcount = ft_countwords(s, c);
+	if (wordcount == 0)
+		return (NULL);
 	words = malloc((wordcount + 1) * sizeof(char *));
 	if (!words)
 		return (NULL);

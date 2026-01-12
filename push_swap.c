@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: obehlil <obehlil@student.1337.ma>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/08 13:34:47 by obehlil           #+#    #+#             */
+/*   Updated: 2026/01/08 13:34:48 by obehlil          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pushSwap.h"
 
 static void	common_rotations(t_stack *from, t_stack *to,
@@ -82,4 +94,5 @@ void	push_swap(t_stack *stack_a)
 		push_best_back(stack_b, stack_a);
 	final_rot = min_rotations_to_top(stack_a, 0);
 	finish_rotations_to(stack_a, &final_rot);
+	free_stack(stack_b);
 }
